@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: radial-gradient(ellipse at top, #302044, #090711 75%);
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.game-container {
+    width: 100%;
+    max-width: 700px;
+    background: rgba(17, 13, 28, 0.96);
+    border: 1px solid #70418c;
+    border-radius: 20px;
+    padding: 28px 22px;
+    text-align: center;
+    box-shadow: 0 0 35px #55236d66;
+}
+
+.eyebrow {
+    color: #bd83e9;
+    letter-spacing: 4px;
+    font-size: 11px;
+    margin-bottom: 12px;
+}
+
+h1 {
+    color: #e6b2ff;
+    font-size: clamp(25px, 6vw, 38px);
+    text-shadow: 0 0 15px #a34ad6;
+}
+
+.subtitle {
+    color: #aaa0b9;
+    margin-top: 9px;
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-around;
+    gap: 8px;
+    background: #251a35;
+    border: 1px solid #54386d;
+    border-radius: 12px;
+    padding: 15px 5px;
+    margin: 24px 0 15px;
+}
+
+.score-board div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.score-board span {
+    color: #bda7d1;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.score-board strong {
+    color: #f4c7ff;
+    font-size: 24px;
+}
+
+#message {
+    color: #e5c9f5;
+    min-height: 25px;
+    margin-bottom: 12px;
+}
+
+#game-area {
+    position: relative;
+    height: 320px;
+    overflow: hidden;
+    border-radius: 14px;
+    border: 2px solid #593b71;
+    background:
+        radial-gradient(circle at 50% 20%, #3b2853, transparent 55%),
+        linear-gradient(#151021, #080d12);
+}
+
+.moon {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    font-size: 45px;
+    filter: drop-shadow(0 0 15px #d9c3ff);
+}
+
+.tree {
+    position: absolute;
+    bottom: 30px;
+    font-size: 70px;
+    opacity: 0.45;
+}
+
+.tree-one {
+    left: 8px;
+}
+
+.tree-two {
+    right: 8px;
+}
+
+.ground {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background: #101b18;
+    border-top: 2px solid #293b2b;
+}
+
+.target {
+    position: absolute;
+    z-index: 2;
+    width: 65px;
+    height: 65px;
+    border: none;
+    background: transparent;
+    font-size: 42px;
+    cursor: pointer;
+    animation: appear 0.25s ease-out;
+    touch-action: manipulation;
+    filter: drop-shadow(0 0 10px #c58aff);
+}
+
+.target:hover {
+    transform: scale(1.2);
+}
+
+.target:focus-visible {
+    outline: 2px solid white;
+    border-radius: 50%;
+}
+
+@keyframes appear {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+#start-btn {
+    margin-top: 20px;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 9px;
+    background: #9c42c9;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 15px #8b36b5;
+}
+
+#start-btn:hover {
+    background: #bd61e9;
+}
+
+#start-btn:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.instructions {
+    color: #b9a8c8;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-top: 20px;
+}
+
+footer {
+    color: #816b91;
+    font-size: 11px;
+    margin-top: 20px;
+}
+
+@media (max-width: 450px) {
+    .game-container {
+        padding: 20px 12px;
+    }
+
+    #game-area {
+        height: 290px;
+    }
+
+    .score-board strong {
+        font-size: 20px;
+    }
+}

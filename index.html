@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghost Catcher - Midnight Hunt</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <main class="game-container">
+
+        <header>
+            <p class="eyebrow">THE HAUNTED FOREST</p>
+            <h1>👻 GHOST CATCHER</h1>
+            <p class="subtitle">Enter if you dare...</p>
+        </header>
+
+        <section class="score-board">
+
+            <div>
+                <span>SCORE</span>
+                <strong id="score">0</strong>
+            </div>
+
+            <div>
+                <span>TIME LEFT</span>
+                <strong id="time">30</strong>
+            </div>
+
+            <div>
+                <span>BEST SCORE</span>
+                <strong id="best">0</strong>
+            </div>
+
+        </section>
+
+        <p id="message">
+            Catch the ghosts. Avoid the cursed pumpkins!
+        </p>
+
+        <section id="game-area">
+
+            <div class="moon">🌕</div>
+
+            <div class="tree tree-one">🌲</div>
+            <div class="tree tree-two">🌲</div>
+
+            <div class="ground"></div>
+
+        </section>
+
+        <button id="start-btn">START THE HUNT</button>
+
+        <div class="instructions">
+            👻 Catch ghosts: +1 point<br>
+            🎃 Cursed pumpkins: -2 points<br>
+            You have 30 seconds!
+        </div>
+
+        <footer>
+            ☠️ Survive the midnight hunt ☠️
+        </footer>
+
+    </main>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
